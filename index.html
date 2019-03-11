@@ -91,15 +91,12 @@ $(function() {
 		$(".floating_bar .floating_qrcode").css('height', '53px');
 	});
 
-	$('.floating_conct').on('touchstart', function(e) {
-		e.preventDefault();
+	$('.floating_conct').on('touchstart', function() {
 		$(".floating_conct").css("right", "5px");
 		$(".floating_bar .floating_qrcode").css('height', '200px');
 	});
 
-	$('.floating_conct').on('touchend', function(e) {
-		e.preventDefault();
-		sleep(3000);
+	$('.floating_conct').on('touchend', function() {
 		$(".floating_conct").css("right", "-127px");
 		$(".floating_bar .floating_qrcode").css('height', '53px');
 	});
