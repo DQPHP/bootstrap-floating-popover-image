@@ -4,6 +4,8 @@
 	<title>Floating image by css.</title>
 </head>
 <body>
+
+<!-- Fixed image floating  -->
 <style>
 #floating-image {
 	position: fixed;
@@ -15,6 +17,76 @@
 <div id="floating-image">
 	<img src="https://dummyimage.com/100">
 </div>
+
+
+<script type="text/javascript" srt="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<style type="text/css">
+/*右侧客服style*/
+.floating_conct {
+	position: fixed;
+	z-index: 9999999;
+	top: 200px;
+	right: -127px;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+.floating_bar ul li {
+	width: 180px;
+	height: 53px;
+	font: 16px/53px 'Microsoft YaHei';
+	color: #fff;
+	text-indent: 54px;
+	margin-bottom: 3px;
+	border-radius: 3px;
+	transition: all .5s ease;
+	overflow: hidden;
+}
+.floating_bar .floating_contact {
+	text-indent: 0;
+	background: #3e667d url(http://www.ytwzjs.com/kefu-style/liuyan.png) no-repeat;
+}
+.floating_bar .floating_qrcode {
+	height:200px;
+	background: #3e667d url(http://www.ytwzjs.com/kefu-style/wx.png) no-repeat;
+}
+.hd_qr {
+	padding: 0 29px 25px 29px;
+}
+.floating_contact a {
+	display: block;
+	text-indent: 54px;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
+</style>
+
+<div class="floating_conct" style="right: -127px;">
+  <div class="floating_bar">
+	<ul>
+		<li class="floating_contact">
+			<a href="http://farsighted-edu.com/contact">联系咨询</a>
+		</li>
+		<li class="floating_qrcode" style="height: 53px;">微信客服<br>
+			<img class="hd_qr" src="https://mp.weixin.qq.com/mp/qrcode?scene=10000004&size=102&__biz=MzU4MjY0NjAyNw==&mid=2247483854&idx=1&sn=c63f783eab8ccb5edfb70142b468aa40&send_time=">
+		</li>
+	</ul>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(function() {
+	// 悬浮窗口
+	$(".floating_conct").hover(function() {
+		$(".floating_conct").css("right", "5px");
+		$(".floating_bar .floating_qrcode").css('height', '200px');
+	}, function() {
+		$(".floating_conct").css("right", "-127px");
+		$(".floating_bar .floating_qrcode").css('height', '53px');
+	});
+});
+</script>
+
 </body>
 </html>
 
